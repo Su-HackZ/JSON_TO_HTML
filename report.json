@@ -1,0 +1,238 @@
+{
+    "image": "ubuntu:18.04",
+    "unapproved": [
+        "CVE-2016-2781",
+        "CVE-2019-13050",
+        "CVE-2018-1000654",
+        "CVE-2013-4235",
+        "CVE-2018-7169",
+        "CVE-2018-16868",
+        "CVE-2019-20838",
+        "CVE-2020-14155",
+        "CVE-2017-11164",
+        "CVE-2020-13844",
+        "CVE-2019-17595",
+        "CVE-2019-17594",
+        "CVE-2021-3326",
+        "CVE-2016-10739",
+        "CVE-2019-25013",
+        "CVE-2020-6096",
+        "CVE-2009-5155",
+        "CVE-2020-27618",
+        "CVE-2015-8985",
+        "CVE-2016-10228",
+        "CVE-2019-18276"
+    ],
+    "vulnerabilities": [
+        {
+            "featurename": "gcc-8",
+            "featureversion": "8.4.0-1ubuntu1~18.04",
+            "vulnerability": "CVE-2020-13844",
+            "namespace": "ubuntu:18.04",
+            "description": "Arm Armv8-A core implementations utilizing speculative execution past unconditional changes in control flow may allow unauthorized disclosure of information to an attacker with local user access via a side-channel analysis, aka \"straight-line speculation.\"",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2020-13844",
+            "severity": "Medium",
+            "fixedby": ""
+        },
+        {
+            "featurename": "glibc",
+            "featureversion": "2.27-3ubuntu1.4",
+            "vulnerability": "CVE-2021-3326",
+            "namespace": "ubuntu:18.04",
+            "description": "The iconv function in the GNU C Library (aka glibc or libc6) 2.32 and earlier, when processing invalid input sequences in the ISO-2022-JP-3 encoding, fails an assertion in the code path and aborts the program, potentially resulting in a denial of service.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2021-3326",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "gnupg2",
+            "featureversion": "2.2.4-1ubuntu1.4",
+            "vulnerability": "CVE-2019-13050",
+            "namespace": "ubuntu:18.04",
+            "description": "Interaction between the sks-keyserver code through 1.2.0 of the SKS keyserver network, and GnuPG through 2.2.16, makes it risky to have a GnuPG keyserver configuration line referring to a host on the SKS keyserver network. Retrieving data from this network may cause a persistent denial of service, because of a Certificate Spamming Attack.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-13050",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "glibc",
+            "featureversion": "2.27-3ubuntu1.4",
+            "vulnerability": "CVE-2020-27618",
+            "namespace": "ubuntu:18.04",
+            "description": "The iconv function in the GNU C Library (aka glibc or libc6) 2.32 and earlier, when processing invalid multi-byte input sequences in IBM1364, IBM1371, IBM1388, IBM1390, and IBM1399 encodings, fails to advance the input state, which could lead to an infinite loop in applications, resulting in a denial of service, a different vulnerability from CVE-2016-10228.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2020-27618",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "shadow",
+            "featureversion": "1:4.5-1ubuntu2",
+            "vulnerability": "CVE-2018-7169",
+            "namespace": "ubuntu:18.04",
+            "description": "An issue was discovered in shadow 4.5. newgidmap (in shadow-utils) is setuid and allows an unprivileged user to be placed in a user namespace where setgroups(2) is permitted. This allows an attacker to remove themselves from a supplementary group, which may allow access to certain filesystem paths if the administrator has used \"group blacklisting\" (e.g., chmod g-rwx) to restrict access to paths. This flaw effectively reverts a security feature in the kernel (in particular, the /proc/self/setgroups knob) to prevent this sort of privilege escalation.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-7169",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "gnutls28",
+            "featureversion": "3.5.18-1ubuntu1.5",
+            "vulnerability": "CVE-2018-16868",
+            "namespace": "ubuntu:18.04",
+            "description": "A Bleichenbacher type side-channel based padding oracle attack was found in the way gnutls handles verification of RSA decrypted PKCS#1 v1.5 data. An attacker who is able to run process on the same physical core as the victim process, could use this to extract plaintext or in some cases downgrade any TLS connections to a vulnerable server.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-16868",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "pcre3",
+            "featureversion": "2:8.39-9",
+            "vulnerability": "CVE-2019-20838",
+            "namespace": "ubuntu:18.04",
+            "description": "libpcre in PCRE before 8.43 allows a subject buffer over-read in JIT when UTF is disabled, and \\X or \\R has more than one fixed quantifier, a related issue to CVE-2019-20454.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-20838",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "glibc",
+            "featureversion": "2.27-3ubuntu1.4",
+            "vulnerability": "CVE-2020-6096",
+            "namespace": "ubuntu:18.04",
+            "description": "An exploitable signed comparison vulnerability exists in the ARMv7 memcpy() implementation of GNU glibc 2.30.9000. Calling memcpy() (on ARMv7 targets that utilize the GNU glibc implementation) with a negative value for the 'num' parameter results in a signed comparison vulnerability. If an attacker underflows the 'num' parameter to memcpy(), this vulnerability could lead to undefined behavior such as writing to out-of-bounds memory and potentially remote code execution. Furthermore, this memcpy() implementation allows for program execution to continue in scenarios where a segmentation fault or crash should have occurred. The dangers occur in that subsequent execution and iterations of this code will be executed with this corrupted data.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2020-6096",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "glibc",
+            "featureversion": "2.27-3ubuntu1.4",
+            "vulnerability": "CVE-2019-25013",
+            "namespace": "ubuntu:18.04",
+            "description": "The iconv feature in the GNU C Library (aka glibc or libc6) through 2.32, when processing invalid multi-byte input sequences in the EUC-KR encoding, may have a buffer over-read.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-25013",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "shadow",
+            "featureversion": "1:4.5-1ubuntu2",
+            "vulnerability": "CVE-2013-4235",
+            "namespace": "ubuntu:18.04",
+            "description": "shadow: TOCTOU (time-of-check time-of-use) race condition when copying and removing directory trees",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2013-4235",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "coreutils",
+            "featureversion": "8.28-1ubuntu1",
+            "vulnerability": "CVE-2016-2781",
+            "namespace": "ubuntu:18.04",
+            "description": "chroot in GNU coreutils, when used with --userspec, allows local users to escape to the parent session via a crafted TIOCSTI ioctl call, which pushes characters to the terminal's input buffer.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2016-2781",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "glibc",
+            "featureversion": "2.27-3ubuntu1.4",
+            "vulnerability": "CVE-2016-10739",
+            "namespace": "ubuntu:18.04",
+            "description": "In the GNU C Library (aka glibc or libc6) through 2.28, the getaddrinfo function would successfully parse a string that contained an IPv4 address followed by whitespace and arbitrary characters, which could lead applications to incorrectly assume that it had parsed a valid string, without the possibility of embedded HTTP headers or other potentially dangerous substrings.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2016-10739",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "bash",
+            "featureversion": "4.4.18-2ubuntu1.2",
+            "vulnerability": "CVE-2019-18276",
+            "namespace": "ubuntu:18.04",
+            "description": "An issue was discovered in disable_priv_mode in shell.c in GNU Bash through 5.0 patch 11. By default, if Bash is run with its effective UID not equal to its real UID, it will drop privileges by setting its effective UID to its real UID. However, it does so incorrectly. On Linux and other systems that support \"saved UID\" functionality, the saved UID is not dropped. An attacker with command execution in the shell can use \"enable -f\" for runtime loading of a new builtin, which can be a shared object that calls setuid() and therefore regains privileges. However, binaries running with an effective UID of 0 are unaffected.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-18276",
+            "severity": "Low",
+            "fixedby": ""
+        },
+        {
+            "featurename": "ncurses",
+            "featureversion": "6.1-1ubuntu1.18.04",
+            "vulnerability": "CVE-2019-17594",
+            "namespace": "ubuntu:18.04",
+            "description": "There is a heap-based buffer over-read in the _nc_find_entry function in tinfo/comp_hash.c in the terminfo library in ncurses before 6.1-20191012.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-17594",
+            "severity": "Negligible",
+            "fixedby": ""
+        },
+        {
+            "featurename": "pcre3",
+            "featureversion": "2:8.39-9",
+            "vulnerability": "CVE-2017-11164",
+            "namespace": "ubuntu:18.04",
+            "description": "In PCRE 8.41, the OP_KETRMAX feature in the match function in pcre_exec.c allows stack exhaustion (uncontrolled recursion) when processing a crafted regular expression.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-11164",
+            "severity": "Negligible",
+            "fixedby": ""
+        },
+        {
+            "featurename": "pcre3",
+            "featureversion": "2:8.39-9",
+            "vulnerability": "CVE-2020-14155",
+            "namespace": "ubuntu:18.04",
+            "description": "libpcre in PCRE before 8.44 allows an integer overflow via a large number after a (?C substring.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2020-14155",
+            "severity": "Negligible",
+            "fixedby": ""
+        },
+        {
+            "featurename": "glibc",
+            "featureversion": "2.27-3ubuntu1.4",
+            "vulnerability": "CVE-2009-5155",
+            "namespace": "ubuntu:18.04",
+            "description": "In the GNU C Library (aka glibc or libc6) before 2.28, parse_reg_exp in posix/regcomp.c misparses alternatives, which allows attackers to cause a denial of service (assertion failure and application exit) or trigger an incorrect result by attempting a regular-expression match.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2009-5155",
+            "severity": "Negligible",
+            "fixedby": ""
+        },
+        {
+            "featurename": "libtasn1-6",
+            "featureversion": "4.13-2",
+            "vulnerability": "CVE-2018-1000654",
+            "namespace": "ubuntu:18.04",
+            "description": "GNU Libtasn1-4.13 libtasn1-4.13 version libtasn1-4.13, libtasn1-4.12 contains a DoS, specifically CPU usage will reach 100% when running asn1Paser against the POC due to an issue in _asn1_expand_object_id(p_tree), after a long time, the program will be killed. This attack appears to be exploitable via parsing a crafted file.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-1000654",
+            "severity": "Negligible",
+            "fixedby": ""
+        },
+        {
+            "featurename": "glibc",
+            "featureversion": "2.27-3ubuntu1.4",
+            "vulnerability": "CVE-2015-8985",
+            "namespace": "ubuntu:18.04",
+            "description": "The pop_fail_stack function in the GNU C Library (aka glibc or libc6) allows context-dependent attackers to cause a denial of service (assertion failure and application crash) via vectors related to extended regular expression processing.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2015-8985",
+            "severity": "Negligible",
+            "fixedby": ""
+        },
+        {
+            "featurename": "glibc",
+            "featureversion": "2.27-3ubuntu1.4",
+            "vulnerability": "CVE-2016-10228",
+            "namespace": "ubuntu:18.04",
+            "description": "The iconv program in the GNU C Library (aka glibc or libc6) 2.31 and earlier, when invoked with multiple suffixes in the destination encoding (TRANSLATE or IGNORE) along with the -c option, enters an infinite loop when processing invalid multi-byte input sequences, leading to a denial of service.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2016-10228",
+            "severity": "Negligible",
+            "fixedby": ""
+        },
+        {
+            "featurename": "ncurses",
+            "featureversion": "6.1-1ubuntu1.18.04",
+            "vulnerability": "CVE-2019-17595",
+            "namespace": "ubuntu:18.04",
+            "description": "There is a heap-based buffer over-read in the fmt_entry function in tinfo/comp_hash.c in the terminfo library in ncurses before 6.1-20191012.",
+            "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-17595",
+            "severity": "Negligible",
+            "fixedby": ""
+        }
+    ]
+}
