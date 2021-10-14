@@ -8,7 +8,9 @@ sudo pip install json2html
 #steps to run
 
 $ git clone https://github.com/Su-HackZ/JSON_TO_HTML.git 
+
 $ cd JSON_TO_HTML/
+
 $ python3 JSON_TO_HTML.py 
  
 
